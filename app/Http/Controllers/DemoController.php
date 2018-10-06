@@ -21,7 +21,7 @@ class DemoController extends Controller
 
         if($tabunganAwal > 500000) {
             $marketing->total_tabungan += $tabunganAwal;
-            $marketing->poin = hitungPoin($tabunganAwal);
+            $marketing->poin += hitungPoin($tabunganAwal);
             $marketing->save();
         }
 
